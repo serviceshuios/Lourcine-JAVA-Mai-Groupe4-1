@@ -1,11 +1,16 @@
 package domaine;
 
+import java.util.Collection;
+
 public class Personne {
 
 		private int IdPersonne;
 		private String nom;
 		private String prenom;
 		private int age;
+		private Login login;
+		private Collection<Compte> comptes;
+		private Collection<Club> clubs;
 		
 		// ************* CONSTRUCTEURS ************* //
 		/**
@@ -32,11 +37,55 @@ public class Personne {
 
 		// ************* GETTERS & SETTERS ************* //	
 		
+		
+		
 		/**
 		 * @return the idPersonne
 		 */
 		public int getIdPersonne() {
 			return IdPersonne;
+		}
+
+		/**
+		 * @return the login
+		 */
+		public Login getLogin() {
+			return login;
+		}
+
+		/**
+		 * @param login the login to set
+		 */
+		public void setLogin(Login login) {
+			this.login = login;
+		}
+
+		/**
+		 * @return the comptes
+		 */
+		public Collection<Compte> getComptes() {
+			return comptes;
+		}
+
+		/**
+		 * @param comptes the comptes to set
+		 */
+		public void setComptes(Collection<Compte> comptes) {
+			this.comptes = comptes;
+		}
+
+		/**
+		 * @return the clubs
+		 */
+		public Collection<Club> getClubs() {
+			return clubs;
+		}
+
+		/**
+		 * @param clubs the clubs to set
+		 */
+		public void setClubs(Collection<Club> clubs) {
+			this.clubs = clubs;
 		}
 
 		/**
