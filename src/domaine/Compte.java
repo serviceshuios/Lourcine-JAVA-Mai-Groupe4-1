@@ -11,6 +11,7 @@ public class Compte {
 	
 	private int idCompte;
 	private double solde;
+	private Personne propriotaire;
 	
 	
 	
@@ -45,8 +46,16 @@ public class Compte {
 	public void setSolde(double solde) {
 		this.solde = solde;
 	}
-	
-	
-	
+
+
+	public Personne getPropriotaire() {
+		return propriotaire;
+	}
+
+
+	public void setPropriotaire(Personne propriotaire) {
+		this.propriotaire = propriotaire;
+	}
+		
 
 }
