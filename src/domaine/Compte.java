@@ -11,8 +11,8 @@ public class Compte {
 	
 	private int idCompte;
 	protected double solde;
-	protected Personne proprietaire;
 	
+	protected Personne proprietaire;
 	
 	public Compte() {
 		super();
