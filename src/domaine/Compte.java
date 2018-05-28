@@ -10,8 +10,8 @@ package domaine;
 public class Compte {
 	
 	private int idCompte;
-	private double solde;
-	private Personne propriotaire;
+	protected double solde;
+	protected Personne proprietaire;
 	
 	
 	
@@ -48,13 +48,13 @@ public class Compte {
 	}
 
 
-	public Personne getPropriotaire() {
-		return propriotaire;
+	public Personne getProprietaire() {
+		return proprietaire;
 	}
 
 
-	public void setPropriotaire(Personne propriotaire) {
-		this.propriotaire = propriotaire;
+	public void setPropriotaire(Personne proprietaire) {
+		this.proprietaire = proprietaire;
 	}
 		
 
