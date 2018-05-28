@@ -14,8 +14,6 @@ public class Compte {
 	protected Personne proprietaire;
 	
 	
-	
-	
 	public Compte() {
 		super();
 	}
