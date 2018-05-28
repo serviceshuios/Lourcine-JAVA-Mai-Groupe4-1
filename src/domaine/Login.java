@@ -5,6 +5,7 @@ public class Login {
 	private int IdLogin;
 	private String pseudo;
 	private String mdp;
+	private Personne personne;
 	
 	// ************* CONSTRUCTEURS ************* //	
 	/**
@@ -20,6 +21,9 @@ public class Login {
 	}
 
 
+	
+
+
 	/**
 	 * 
 	 */
@@ -29,7 +33,20 @@ public class Login {
 	}
 
 	// ************* GETTERS & SETTERS ************* //	
+	/**
+	 * @return the personne
+	 */
+	public Personne getPersonne() {
+		return personne;
+	}
 
+
+	/**
+	 * @param personne the personne to set
+	 */
+	public void setPersonne(Personne personne) {
+		this.personne = personne;
+	}
 	/**
 	 * @return the idLogin
 	 */
