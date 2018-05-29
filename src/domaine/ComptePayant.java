@@ -34,6 +34,14 @@ public class ComptePayant extends Compte {
 	public void setTaux(double taux) {
 		this.taux = taux;
 	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "ComptePayant "+super.toString()+"taux=" + taux + "]"; 
+	}
 	
 	
 	

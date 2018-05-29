@@ -29,12 +29,12 @@ public interface Iservice {
 	public void listePersonne(Map<Integer, Personne > personnes );
 	
 	//CRUD Compte
-	public void createCompte(Compte c);
-	
+
+	public Map <Integer, Compte> createCompte(Compte c);
 	public void readCompte(Compte c);
 	public void updateCompte(Compte c);
 	public void deleteCompte(Compte c);
-	public List<Compte> listComptes();
+	public void listeComptes(Map<Integer, Compte> comptes);
 	
 	//CRUD Club
 	public void createClub(Club club);

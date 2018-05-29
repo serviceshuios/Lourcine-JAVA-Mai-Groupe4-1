@@ -34,6 +34,14 @@ public class CompteEpargne extends Compte {
 	public void setPourcentage(double pourcentage) {
 		this.pourcentage = pourcentage;
 	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "CompteEpargne "+super.toString()+"pourcentage=" + pourcentage + "]"; 
+	}
 	
 
 }
