@@ -33,6 +33,9 @@ public class Lanceur {
 		System.out.println("Affichage Map avant ajout des comptes");
 		service.listeComptes(ListeComptes);
 		Compte c1 = new CompteEpargne(1,2500,5);
+		System.out.println(c1.hashCode());
+		Compte c4 = new CompteEpargne(1,2500,5);
+		System.out.println(c4.hashCode());
 		Compte c2 = new CompteSimple(2, 5000, 600);
 		Compte c3 = new ComptePayant(3, 9000, 0.4);
 		System.out.println("Affichage Map après ajout des comptes");
@@ -45,9 +48,15 @@ public class Lanceur {
 		System.out.println("**************************************");
 		service.ajouterTitulaire(c1, p);
 		service.ajouterTitulaire(c2, p);
+		service.ajouterTitulaire(c1, p);
+		service.ajouterTitulaire(c4, p);
 		service.ajouterTitulaire(c3, p1);
 		resultats = service.createPersonne(p);
 		service.listePersonne(resultats);
+		
+
+		
+		
 		
 	}
 

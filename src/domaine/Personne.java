@@ -2,6 +2,7 @@ package domaine;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
 
 public class Personne {
 
@@ -10,7 +11,7 @@ public class Personne {
 		private String prenom;
 		private int age;
 		private Login login;
-		private Collection<Compte> comptes = new ArrayList<Compte>();
+		private Collection<Compte> comptes = new HashSet<Compte>();
 		private Collection<Club> clubs = new ArrayList<Club>();
 		
 		// ************* CONSTRUCTEURS ************* //
