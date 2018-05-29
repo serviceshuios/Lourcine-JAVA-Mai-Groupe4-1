@@ -32,7 +32,6 @@ public class Lanceur {
 		
 		System.out.println("Affichage Map avant ajout des comptes");
 		service.listeComptes(ListeComptes);
-		
 		Compte c1 = new CompteEpargne(1,2500,5);
 		Compte c2 = new CompteSimple(2, 5000, 600);
 		Compte c3 = new ComptePayant(3, 9000, 0.4);
@@ -42,6 +41,13 @@ public class Lanceur {
 		ListeComptes = service.createCompte(c3);
 		service.listeComptes(ListeComptes);
 
+		// ASSOCIER UN COMPTE A UNE PERSONNE
+		System.out.println("**************************************");
+		service.ajouterTitulaire(c1, p);
+		service.ajouterTitulaire(c2, p);
+		service.ajouterTitulaire(c3, p1);
+		resultats = service.createPersonne(p);
+		service.listePersonne(resultats);
 		
 	}
 
