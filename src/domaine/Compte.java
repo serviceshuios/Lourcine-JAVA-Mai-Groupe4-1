@@ -9,6 +9,15 @@ package domaine;
  */
 public abstract class Compte {
 	
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "[idCompte=" + idCompte + ", solde=" + solde+ ", " ;
+	}
+
+
 	private int idCompte;
 	protected double solde;
 	

@@ -10,6 +10,15 @@ package domaine;
 public class CompteSimple extends Compte {
 	
 	
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "CompteSimple "+super.toString()+"decouvert=" + decouvert + "]"; 
+	}
+
+
 	private double decouvert;
 	
 	
