@@ -22,7 +22,7 @@ public class ComptePayant extends Compte {
 		this.taux = taux;
 	}
 
-	public ComptePayant(int idCompte, double solde) {
+	public ComptePayant(int idCompte, double solde, double taux) {
 		super(idCompte, solde);
 		this.taux = taux;
 	}
@@ -40,7 +40,7 @@ public class ComptePayant extends Compte {
 	 */
 	@Override
 	public String toString() {
-		return "ComptePayant "+super.toString()+"taux=" + taux + "]"; 
+		return "ComptePayant "+super.toString()+"taux=" + taux*100 + "%]"; 
 	}
 	
 	
