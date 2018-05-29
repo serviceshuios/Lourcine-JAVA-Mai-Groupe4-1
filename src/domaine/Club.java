@@ -1,13 +1,21 @@
 package domaine;
 
+import java.util.List;
+
 public class Club {
 
 	private int IdClub;
 	private String nomClub;
+	private List<Personne> personnes;
 	
 	
 	
 	// ************* CONSTRUCTEURS ************* //
+
+
+	
+
+
 
 	/**
 	 * @param idClub
@@ -17,6 +25,19 @@ public class Club {
 		super();
 		IdClub = idClub;
 		this.nomClub = nomClub;
+	}
+
+
+	/**
+	 * @param idClub
+	 * @param nomClub
+	 * @param personnes
+	 */
+	public Club(int idClub, String nomClub, List<Personne> personnes) {
+		super();
+		IdClub = idClub;
+		this.nomClub = nomClub;
+		this.personnes = personnes;
 	}
 
 
@@ -36,6 +57,22 @@ public class Club {
 	 */
 	public int getIdClub() {
 		return IdClub;
+	}
+
+
+	/**
+	 * @return the personnes
+	 */
+	public List<Personne> getPersonnes() {
+		return personnes;
+	}
+
+
+	/**
+	 * @param personnes the personnes to set
+	 */
+	public void setPersonnes(List<Personne> personnes) {
+		this.personnes = personnes;
 	}
 
 

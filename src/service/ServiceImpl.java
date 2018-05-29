@@ -159,13 +159,16 @@ public class ServiceImpl implements Iservice {
 	@Override
 	public void attribuerCompte(Personne p, Compte c) {
 		// TODO Auto-generated method stub
-
+		p.getComptes().add(c); //Récupère la liste des compte de la personne et ajoute c
+		//opération inverse : ajoute une personne à un compte
+		c.setPropriotaire(p);
 	}
 
 	@Override
 	public void affilierClub(Personne p, Club club) {
 		// TODO Auto-generated method stub
-
+		p.getClubs().add(club);
+		club.getPersonnes().add(p);
 	}
 
 	@Override
@@ -189,6 +192,8 @@ public class ServiceImpl implements Iservice {
 	@Override
 	public void ajouterTitulaire(Compte c, Personne p) {
 		// TODO Auto-generated method stub
+		p.getComptes().add(c);
+		c.setPropriotaire(p);
 
 	}
 
@@ -201,7 +206,10 @@ public class ServiceImpl implements Iservice {
 	@Override
 	public void listePersonne(Map<Integer, Personne> personnes) {
 		for (Integer cle : personnes.keySet()) {
-			System.out.println(" personne " + personnes.get(cle));
+			System.out.println(personnes.get(cle));
+		
+			if(personnes.get(cle).getComptes().size() != 0)
+				System.out.println(personnes.get(cle).getComptes());
 		}
 
 	}
