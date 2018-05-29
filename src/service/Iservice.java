@@ -38,6 +38,7 @@ public interface Iservice {
 	public List<Club> listClubs();
 	
 	
+	
 	//CRUD Login
 	public void createLogin(Login login);
 	public void readLogin(Login login);
