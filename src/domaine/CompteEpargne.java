@@ -40,7 +40,7 @@ public class CompteEpargne extends Compte {
 	 */
 	@Override
 	public String toString() {
-		return "CompteEpargne "+super.toString()+"pourcentage=" + pourcentage + "]"; 
+		return "CompteEpargne "+super.toString()+"pourcentage=" + pourcentage*100 + "%]"; 
 	}
 	
 

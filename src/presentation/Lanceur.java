@@ -35,7 +35,7 @@ public class Lanceur {
 		
 		Compte c1 = new CompteEpargne(1,2500,5);
 		Compte c2 = new CompteSimple(2, 5000, 600);
-		Compte c3 = new ComptePayant(3, 9000);
+		Compte c3 = new ComptePayant(3, 9000, 0.4);
 		System.out.println("Affichage Map après ajout des comptes");
 		ListeComptes = service.createCompte(c1);
 		ListeComptes = service.createCompte(c2);
