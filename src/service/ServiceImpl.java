@@ -203,7 +203,9 @@ public class ServiceImpl implements Iservice{
 
 	@Override
 	public void listePersonne(Map<Integer, Personne> personnes) {
-		// TODO Auto-generated method stub
+		for(Integer cle : personnes.keySet()) {
+			System.out.println(" personne " + personnes.get(cle));
+		}
 		
 	}
 
