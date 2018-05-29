@@ -19,7 +19,9 @@ public class Lanceur {
 		service.listePersonne(resultats);		
 		System.out.println("Ajout d'une personne");
 		Personne p = new Personne(1, "ZEC", "UNION", 47);
+		Personne p1 = new Personne(2, "Kam", "JEE", 47);
 		resultats = service.createPersonne(p);
+		resultats = service.createPersonne(p1);
 		System.out.println("Affichage Map apres ajout");
 		service.listePersonne(resultats);
 	}
