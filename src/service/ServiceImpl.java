@@ -18,12 +18,16 @@ import domaine.Personne;
  */
 public class ServiceImpl implements Iservice {
 
-	// Déclarer et initialiser la liste des personnes et de comptes
+	// Déclarer et initialiser la liste des personnes, logins et de comptes
 
 	private Map<Integer, Personne> personnes = new Hashtable<Integer, Personne>();
 
 	private Map<Integer, Compte> comptes = new Hashtable<Integer, Compte>();
 	private Map<Integer, Club> clubs = new Hashtable<Integer, Club>();
+	
+	private Map<Integer, Login> logins = new Hashtable<Integer, Login>();
+	
+	private Map<Integer, Login> logins = new Hashtable<Integer, Login>();
 
 	/**
 	 * @return the personnes
@@ -127,9 +131,10 @@ public class ServiceImpl implements Iservice {
 	}
 
 	@Override
-	public void createLogin(Login login) {
+	public Map <Integer, Login> createLogin(Login login) {
 		// TODO Auto-generated method stub
-
+		logins.put(login.getIdLogin(), login);
+		return logins;
 	}
 
 	@Override
@@ -222,6 +227,15 @@ public class ServiceImpl implements Iservice {
 		// TODO Auto-generated method stub
 		for (Integer key : comptes.keySet()) {
 			System.out.println(comptes.get(key));
+		}
+		
+	}
+
+	@Override
+	public void ListeLogins(Map<Integer, Login> logins) {
+		// TODO Auto-generated method stub
+		for (Integer cle : logins.keySet()) {
+			System.out.println(logins.get(cle));
 		}
 		
 	}
