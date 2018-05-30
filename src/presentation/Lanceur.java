@@ -21,11 +21,9 @@ public class Lanceur {
 		
 		Map<Integer, Personne> resultats = new Hashtable<Integer, Personne>();
 		Map<Integer, Compte> ListeComptes = new Hashtable<Integer, Compte>();
-<<<<<<< HEAD
 		Map<Integer, Club> listeClubs = new Hashtable<Integer, Club>();
-=======
 		Map<Integer, Login> ListeLogins = new Hashtable<Integer, Login>();
->>>>>>> branch 'master' of https://github.com/serviceshuios/Lourcine-JAVA-Mai-Groupe4-1.git
+
 		
 		
 		//creation des personnes
@@ -43,14 +41,9 @@ public class Lanceur {
 		//creation des comptes
 		System.out.println("Affichage Map des comptes avant ajout");
 		service.listeComptes(ListeComptes);
-<<<<<<< HEAD
+
 		Compte c1 = new CompteEpargne(1,2500,5);
-=======
-		Compte c1 = new CompteEpargne(1,2500,6);
-		System.out.println(c1.hashCode());
-		Compte c4 = new CompteEpargne(1,2500,5);
-		System.out.println(c4.hashCode());
->>>>>>> branch 'master' of https://github.com/serviceshuios/Lourcine-JAVA-Mai-Groupe4-1.git
+
 		Compte c2 = new CompteSimple(2, 5000, 600);
 		Compte c3 = new ComptePayant(3, 9000, 0.4);
 		System.out.println("Affichage Map des comptes après ajout");
@@ -83,7 +76,7 @@ public class Lanceur {
 		resultats = service.createPersonne(p);
 		service.listePersonne(resultats);
 		
-<<<<<<< HEAD
+
 		// ADHERER UN CLUB A UNE PERSONNE
 		System.out.println("**************************************");
 		service.affilierClub(p1, clb1);
@@ -91,7 +84,7 @@ public class Lanceur {
 		service.listePersonne(resultats);
 		
 
-=======
+
 		// Créer un login
 		System.out.println("Ajout des Logins");
 		Login login1 = new Login(1, "Bobby", "123456", p);
@@ -100,7 +93,7 @@ public class Lanceur {
 		ListeLogins = service.createLogin(login2);
 		System.out.println("Affichage des logins");
 		service.ListeLogins(ListeLogins);
->>>>>>> branch 'master' of https://github.com/serviceshuios/Lourcine-JAVA-Mai-Groupe4-1.git
+
 		
 		
 		
