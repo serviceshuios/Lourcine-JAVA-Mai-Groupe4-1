@@ -46,13 +46,15 @@ public interface Iservice {
 	
 	
 	//CRUD Login
-	public void createLogin(Login login);
+	public Map <Integer, Login> createLogin(Login login);
 	public void readLogin(Login login);
 	public void updateLogin(Login login);
 	public void deleteLogin(Login login);
-	public List<Login> listLogins();
+	public void ListeLogins(Map <Integer, Login> logins);
 	
 	//méthodes métiers
+	
+	//TODO1 Ajouter affilier personne à login
 	public void attribuerCompte(Personne p, Compte c);
 	public void affilierClub(Personne p, Club club);
 	public void crediterCompte(Compte c, double mt);

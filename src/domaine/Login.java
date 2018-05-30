@@ -20,8 +20,22 @@ public class Login {
 		this.mdp = mdp;
 	}
 
+	/**
+	 * @param idLogin
+	 * @param pseudo
+	 * @param mdp
+	 * @param personne
+	 */
+	public Login(int idLogin, String pseudo, String mdp, Personne personne) {
+		super();
+		IdLogin = idLogin;
+		this.pseudo = pseudo;
+		this.mdp = mdp;
+		this.personne = personne;
+	}
 
-	
+
+
 
 
 	/**
@@ -92,6 +106,14 @@ public class Login {
 	 */
 	public void setMdp(String mdp) {
 		this.mdp = mdp;
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Login [IdLogin=" + IdLogin + ", pseudo=" + pseudo + ", mdp=" + mdp + ", personne=" + personne + "]";
 	}
 	
 	

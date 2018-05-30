@@ -7,6 +7,7 @@ import domaine.Compte;
 import domaine.CompteEpargne;
 import domaine.ComptePayant;
 import domaine.CompteSimple;
+import domaine.Login;
 import domaine.Personne;
 import service.Iservice;
 import service.ServiceImpl;
@@ -19,6 +20,7 @@ public class Lanceur {
 		
 		Map<Integer, Personne> resultats = new Hashtable<Integer, Personne>();
 		Map<Integer, Compte> ListeComptes = new Hashtable<Integer, Compte>();
+		Map<Integer, Login> ListeLogins = new Hashtable<Integer, Login>();
 		
 		System.out.println("Affichage Map avant ajout");
 		service.listePersonne(resultats);		
@@ -32,7 +34,7 @@ public class Lanceur {
 		
 		System.out.println("Affichage Map avant ajout des comptes");
 		service.listeComptes(ListeComptes);
-		Compte c1 = new CompteEpargne(1,2500,5);
+		Compte c1 = new CompteEpargne(1,2500,6);
 		System.out.println(c1.hashCode());
 		Compte c4 = new CompteEpargne(1,2500,5);
 		System.out.println(c4.hashCode());
@@ -54,7 +56,14 @@ public class Lanceur {
 		resultats = service.createPersonne(p);
 		service.listePersonne(resultats);
 		
-
+		// Créer un login
+		System.out.println("Ajout des Logins");
+		Login login1 = new Login(1, "Bobby", "123456", p);
+		Login login2 = new Login(2, "Toto", "987654", p1);
+		ListeLogins = service.createLogin(login1);
+		ListeLogins = service.createLogin(login2);
+		System.out.println("Affichage des logins");
+		service.ListeLogins(ListeLogins);
 		
 		
 		
