@@ -27,7 +27,7 @@ public class ServiceImpl implements Iservice {
 	
 	private Map<Integer, Login> logins = new Hashtable<Integer, Login>();
 	
-	private Map<Integer, Login> logins = new Hashtable<Integer, Login>();
+
 
 	/**
 	 * @return the personnes
@@ -153,12 +153,6 @@ public class ServiceImpl implements Iservice {
 	public void deleteLogin(Login login) {
 		// TODO Auto-generated method stub
 
-	}
-
-	@Override
-	public List<Login> listLogins() {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 	@Override
