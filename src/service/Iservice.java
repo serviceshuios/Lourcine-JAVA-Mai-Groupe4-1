@@ -25,7 +25,6 @@ public interface Iservice {
 	public void readPersonne(Personne p);
 	public void updatePersonne(Personne p);
 	public void deletePersonne(Personne p);
-	public List<Personne> listPersonnes();
 	public void listePersonne(Map<Integer, Personne > personnes );
 	
 	//CRUD Compte
@@ -37,11 +36,11 @@ public interface Iservice {
 	public void listeComptes(Map<Integer, Compte> comptes);
 	
 	//CRUD Club
-	public void createClub(Club club);
+	public Map <Integer, Club> createClub(Club club);
 	public void readClub(Club club);
 	public void updateClub(Club club);
 	public void deleteClub(Club club);
-	public List<Club> listClubs();
+	public void listeClubs(Map<Integer, Club> clubs);
 	
 	
 	

@@ -23,6 +23,7 @@ public class ServiceImpl implements Iservice {
 	private Map<Integer, Personne> personnes = new Hashtable<Integer, Personne>();
 
 	private Map<Integer, Compte> comptes = new Hashtable<Integer, Compte>();
+	private Map<Integer, Club> clubs = new Hashtable<Integer, Club>();
 
 	/**
 	 * @return the personnes
@@ -41,7 +42,6 @@ public class ServiceImpl implements Iservice {
 
 	@Override
 	public Map<Integer, Personne> createPersonne(Personne p) {
-		// TODO Auto-generated method stub
 		personnes.put(p.getIdPersonne(), p);
 		return personnes;
 	}
@@ -64,15 +64,10 @@ public class ServiceImpl implements Iservice {
 
 	}
 
-	@Override
-	public List<Personne> listPersonnes() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	@Override
 	public Map <Integer, Compte> createCompte(Compte c) {
-		// TODO Auto-generated method stub
+
 		comptes.put(c.getIdCompte(), c);
 		return comptes;
 	}
@@ -97,8 +92,10 @@ public class ServiceImpl implements Iservice {
 
 	
 	@Override
-	public void createClub(Club club) {
-		// TODO Auto-generated method stub
+	public Map <Integer, Club> createClub(Club club) {
+		
+		clubs.put(club.getIdClub(), club);
+		return clubs;
 
 	}
 
@@ -121,9 +118,12 @@ public class ServiceImpl implements Iservice {
 	}
 
 	@Override
-	public List<Club> listClubs() {
-		// TODO Auto-generated method stub
-		return null;
+	public void listeClubs(Map<Integer, Club> clubs) {		
+		for (Integer cle : clubs.keySet()) {
+			System.out.println(clubs.get(cle));
+		}
+
+		
 	}
 
 	@Override
@@ -158,7 +158,6 @@ public class ServiceImpl implements Iservice {
 
 	@Override
 	public void attribuerCompte(Personne p, Compte c) {
-		// TODO Auto-generated method stub
 		p.getComptes().add(c); //Récupère la liste des compte de la personne et ajoute c
 		//opération inverse : ajoute une personne à un compte
 		c.setPropriotaire(p);
@@ -210,6 +209,9 @@ public class ServiceImpl implements Iservice {
 		
 			if(personnes.get(cle).getComptes().size() != 0)
 				System.out.println(personnes.get(cle).getComptes());
+			
+			if(personnes.get(cle).getClubs().size() != 0)
+				System.out.println(personnes.get(cle).getClubs());
 		}
 
 	}

@@ -1,12 +1,13 @@
 package domaine;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Club {
 
 	private int IdClub;
 	private String nomClub;
-	private List<Personne> personnes;
+	private List<Personne> personnes = new ArrayList<Personne>();
 	
 	
 	
@@ -98,6 +99,14 @@ public class Club {
 	public void setNomClub(String nomClub) {
 		this.nomClub = nomClub;
 	}
+
+
+	@Override
+	public String toString() {
+		return "Club [IdClub=" + IdClub + ", nomClub=" + nomClub + "]";
+	}
+	
+	
 	
 	
 }
